@@ -1,0 +1,60 @@
+﻿@model IEnumerable<LuminaResort.Models.Paquete>
+
+@{
+    ViewData["Title"] = "ListaPaquetes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="separar">ListaPaquetes</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPaquete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombrePaquete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostoPaquete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MensualidadPaquete)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPaquete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombrePaquete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostoPaquete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MensualidadPaquete)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdPaquete }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IdPaquete }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdPaquete })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

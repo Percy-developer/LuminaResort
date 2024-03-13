@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LuminaResort.Models.Reserva>
+
+@{
+    ViewData["Title"] = "ListaReservas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="separar">ListaReservas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCompleto)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.IdReservacion  }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdReservacion }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdReservacion })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

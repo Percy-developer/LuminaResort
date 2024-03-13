@@ -1,0 +1,122 @@
+﻿ @model LuminaResort.Models.Reserva
+
+@{
+    ViewData["Title"] = "Reservar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="Reserve" class="contact d-flex justify-content-center">
+    <div>
+        <div>
+            <h3 class="mini-title text-center">RESERVE</h3>
+            <h2 class="title text-center">Make your reservation</h2>
+            <p class="text-1 text-center">Here you can make your personalized reservation according to your needs and budget.</p>
+        </div>
+        <div class="contact-form mt-5">
+            <form id="formID" class="contact-form-ly" asp-action="Reservar" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="d-flex justify-content-center">
+                    <h3 class="mini-title text-center">Personal Information</h3>
+                </div>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="mb-3">
+                        <label for="typeOfID" class="form-label" asp-for="TipoCedula">Type of ID</label>
+                        <select id="typeOfID" class="form-control fc" asp-for="TipoCedula">
+                            <option value="Fisica">Física</option>
+                            <option value="Juridica">Jurídica</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idNumber" class="form-label" asp-for="Cedula">ID Number</label>
+                        <input id="idNumber" class="form-control fc" asp-for="Cedula">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <div class="mb-3">
+                        <label for="name" class="form-label" asp-for="NombreCompleto">Name</label>
+                        <input id="name" class="form-control fc" asp-for="NombreCompleto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label" asp-for="Telefono">Phone</label>
+                        <input id="phone" class="form-control fc" asp-for="Telefono">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <div class="mb-3">
+                        <label for="address" class="form-label" asp-for="Direccion">Address</label>
+                        <input id="address" class="form-control fc" asp-for="Direccion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" asp-for="Email">Email</label>
+                        <input id="email" class="form-control fc" asp-for="Email">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center mt-4">
+                    <h3 class="mini-title text-center">Reservation Details</h3>
+                </div>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="mb-3">
+                        <label for="choosePackage" class="form-label" asp-for="TipoPaquete">Choose Package</label>
+                        <select id="choosePackage" class="form-control fc" asp-for="TipoPaquete">
+                            <option value="All Inclusive">All Inclusive</option>
+                            <option value="Day Pass">Day Pass</option>
+                            <option value="Only Room">Only Room</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="chooseDates" class="form-label" asp-for="CantidadNoches">Choose Dates</label>
+                        <input id="chooseDates" class="form-control fc" asp-for="CantidadNoches">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <div class="mb-3">
+                        <label for="peopleQuantity" class="form-label" asp-for="CantidadPersonas">People Quantity</label>
+                        <input id="peopleQuantity" class="form-control fc" asp-for="CantidadPersonas">
+                    </div>
+                    <div class="mb-3">
+                        <label for="choosePayment" class="form-label" asp-for="TipoPago">Choose Payment</label>
+                        <select id="choosePayment" class="form-control fc" asp-for="TipoPago">
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                            <option value="Cheque">Cheque</option>
+                        </select>
+                        @* <div id="chequeDetails" class="mb-3" style="display: none;">
+                            <label for="bank" class="form-label">Bank</label>
+                            <input id="bank" class="form-control" asp-for="Banco" />
+
+                            <label for="chequeNumber" class="form-label">Cheque Number</label>
+                            <input id="chequeNumber" class="form-control" asp-for="NumeroCheque" />
+                        </div> *@
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-around align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="mb-2">
+                            <label for="totalAmount" class="price-title">Total Amount</label>
+                            <h3 id="totalAmount" class="text-center price-text">$200</h3>
+                        </div>
+                    </div>
+                    <input type="submit" value="Reserve" class="btn-send">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    @* <script>
+        document.getElementById('choosePayment').addEventListener('change', function () {
+            var chequeDetails = document.getElementById('chequeDetails');
+            chequeDetails.style.display = this.value === 'Cheque' ? 'block' : 'none';
+        });
+    </script> *@
+}

@@ -1,0 +1,43 @@
+﻿@model LuminaResort.Models.Usuario
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="about-us" asp-controller="Usuarios" asp-action="Login" id="FormularioLogin">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="login-title">
+                <h3 class="mini-title text-center">Login</h3>
+                <h2 class="title text-center">Administrator Login</h2>
+                <p class="text-1 text-center">This module in only for administrator uses, if you aren´t one please get out.</p>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5 form-login">
+                @if (TempData["MensajeLogin"] != null)
+                {
+                    <div class="alert alert-warning alert-dismissible fade show text-center message-text" role="alert">@TempData["MensajeLogin"].</div>
+                }
+                @if (TempData["MensajeSesion"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show text-center message-text" role="alert">@TempData["MensajeSesion"].</div>
+                }
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="form-outline mb-4">
+                            <label asp-for="Email" for="typeEmailX-2" class="form-label">Email</label>
+                            <input asp-for="Email" id="typeEmailX-2" class="form-control form-control-lg" />
+                            <span asp-validation-for="Email" class="text-danger text-center"></span>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label asp-for="Password" class="form-label" for="typePasswordX-2">Password</label>
+                            <input asp-for="Password" type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                            <span asp-validation-for="Password" class="text-danger text-center"></span>
+                        </div>
+                        <input type="submit" value="Login" class="btn-send">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

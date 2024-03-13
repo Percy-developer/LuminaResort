@@ -1,0 +1,300 @@
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+    .nav-link:hover {
+        color: #d0d0d0 !important;
+    }
+
+.about-us {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FAF3EB;
+}
+
+.mini-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #AA0000;
+}
+
+.container-bg,
+.packages,
+.contact {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.packages {
+    margin: 100px 0 100px 0;
+}
+
+.container-bg {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/bg-image.jpg") no-repeat;
+    background-size: cover;
+}
+
+.bg-degraded {
+    background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+}
+
+.tagline {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 90px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact {
+    background-color: #FAF3EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 90px;
+    font-weight: 600;
+    color: #003411;
+}
+
+.text-1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #003411;
+}
+
+.text-2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #003411;
+}
+
+.package-card {
+    color: #fff;
+    width: 500px;
+    height: 450px;
+    border-radius: 7px;
+    background: url("../img/image-1.png") repeat;
+}
+
+.pcard-degraded {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background: rgb(52,52,52);
+    background: linear-gradient(90deg, rgba(52,52,52,1) 0%, rgba(66,66,66,0.38699229691876746) 87%, rgba(51,51,51,0) 100%);
+}
+
+.location {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.pcard-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pcard-hotel {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.pcard-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #000;
+    border-radius: 70px !important;
+}
+
+.pcard-price {
+    font-family: 'Raleway', sans-serif;
+    font-size: 51px;
+    font-weight: 600;
+}
+
+.btn-light {
+    color: #000;
+    border-radius: 70px !important;
+}
+
+.contact-form-ly {
+    padding: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    color: #003411;
+}
+
+.form-control {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fc {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.fm {
+    height: 115px;
+}
+
+.btn-send {
+    width: 133px;
+    height: 36px;
+    border-radius: 54px;
+    background-color: #D44949;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: none;
+    font-size: 1rem;
+    border: none;
+}
+
+.contact-info {
+    padding: 0;
+    margin: 0;
+}
+
+
+.login {
+    margin-top: 100px;
+}
+
+.login-title {
+    height: 50px;
+}
+
+.form-login {
+    margin-top: -300px;
+}
+
+.form-label {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.message-text {
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 770px) {
+
+    .logo {
+        width: 30px;
+    }
+    .mini-title {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .tagline {
+        font-size: 50px;
+    }
+
+    .text-1 {
+        font-size: 20px;
+    }
+
+    .text-2 {
+        font-size: 19px;
+    }
+
+    .package-card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .pcard-title {
+        font-size: 20px;
+    }
+
+    .pcard-hotel {
+        font-size: 14px;
+    }
+
+    .pcard-description {
+        font-size: 16px;
+    }
+
+    .btn,
+    .btn-light {
+        font-size: 16px;
+        border-radius: 40px;
+        padding: 8px 20px;
+    }
+
+    .pcard-price {
+        font-size: 30px;
+    }
+
+    .contact-form-ly {
+        padding: 15px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .fc {
+        margin-bottom: 15px;
+    }
+
+    .fm {
+        height: 120px;
+    }
+
+    .btn-send {
+        width: 100%;
+        max-width: 150px;
+        height: 40px;
+        border-radius: 40px;
+        font-size: 1rem;
+    }
+}

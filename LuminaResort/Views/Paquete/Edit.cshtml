@@ -1,0 +1,54 @@
+﻿@model LuminaResort.Models.Paquete
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="separar">Edit</h1>
+
+<h4>Paquete</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdPaquete" class="control-label"></label>
+                <input asp-for="IdPaquete" class="form-control" />
+                <span asp-validation-for="IdPaquete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombrePaquete" class="control-label"></label>
+                <input asp-for="NombrePaquete" class="form-control" />
+                <span asp-validation-for="NombrePaquete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostoPaquete" class="control-label"></label>
+                <input asp-for="CostoPaquete" class="form-control" />
+                <span asp-validation-for="CostoPaquete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MensualidadPaquete" class="control-label"></label>
+                <input asp-for="MensualidadPaquete" class="form-control" />
+                <span asp-validation-for="MensualidadPaquete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListaPaquetes">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
